@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/food_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/entrada01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/food_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lexend"
+        android:textSize="20sp"
+        android:textColor="@color/default_font_color"
+        android:text="Bruschetta Caprese"
+        app:layout_constraintStart_toEndOf="@+id/food_img"
+        app:layout_constraintTop_toTopOf="@+id/food_img" />
+
+    <ImageView
+        android:id="@+id/food_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@+id/food_title"
+        app:layout_constraintTop_toBottomOf="@+id/food_title"
+        app:srcCompat="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/food_time01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="8 ~ 10 min"
+        android:fontFamily="@font/lexend_light"
+        android:textSize="16sp"
+        android:textColor="@color/primary"
+        app:layout_constraintBottom_toBottomOf="@+id/food_clock"
+        app:layout_constraintStart_toEndOf="@+id/food_clock"
+        app:layout_constraintTop_toTopOf="@+id/food_clock" />
+
+    <TextView
+        android:id="@+id/food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="R$ 18,19"
+        android:fontFamily="@font/lexend"
+        android:textSize="16sp"
+        android:textColor="@color/default_font_color"
+        app:layout_constraintStart_toStartOf="@+id/food_clock"
+        app:layout_constraintTop_toBottomOf="@+id/food_clock" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_price" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

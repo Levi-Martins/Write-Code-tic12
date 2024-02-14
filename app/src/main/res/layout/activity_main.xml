@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--HEADER-->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lexend"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background_header"
+        app:layout_constraintEnd_toEndOf="@+id/background_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_art_culinaria"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <!--SUBTITLE-->
+    <TextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lexend"
+        android:text="@string/subtitle_text"
+        android:textAlignment="center"
+        android:textColor="@color/default_font_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_header" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="407dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_text">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp">
+
+            <!--ENTRADAS-->
+            <TextView
+                android:id="@+id/food_starters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_starters"
+                android:textColor="@color/primary"
+                android:textSize="36sp" />
+
+            <!--ENTRADA 01-->
+            <ImageView
+                android:id="@+id/img_item01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_starters"
+                android:src="@drawable/entrada01" />
+
+            <TextView
+                android:id="@+id/food_title01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item01"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item01"
+                android:fontFamily="@font/lexend"
+                android:text="@string/title_item01"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title01"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item01"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock01"
+                android:layout_alignBottom="@id/img_clock01"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock01"
+                android:gravity="center"
+                android:text="@string/food_time01"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock01"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item01"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price01"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock01"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock01"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line01"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item01"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+
+            <!--ENTRADA 02-->
+            <ImageView
+                android:id="@+id/img_item02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line01"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/entrada02" />
+
+            <TextView
+                android:id="@+id/food_title02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item02"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item02"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_title02"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title02"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item02"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock02"
+                android:layout_alignBottom="@id/img_clock02"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock02"
+                android:gravity="center"
+                android:text="@string/food_time02"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock02"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item02"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price02"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock02"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock02"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line02"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item02"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+
+            <!--ENTRADA 03-->
+            <ImageView
+                android:id="@+id/img_item03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line02"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/entrada03" />
+
+            <TextView
+                android:id="@+id/food_title03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item03"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item03"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_title03"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title03"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item03"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock03"
+                android:layout_alignBottom="@id/img_clock03"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock03"
+                android:gravity="center"
+                android:text="@string/food_time03"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock03"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item03"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price03"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock03"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock03"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line03"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item03"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+
+            <!--ENTRADA 04-->
+            <ImageView
+                android:id="@+id/img_item04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line03"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/entrada04" />
+
+            <TextView
+                android:id="@+id/food_title04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item04"
+                android:fontFamily="@font/lexend"
+                android:layout_toEndOf="@id/img_item04"
+                android:layout_marginStart="10dp"
+                android:text="@string/food_title04"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title04"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item04"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock04"
+                android:layout_alignBottom="@id/img_clock04"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock04"
+                android:gravity="center"
+                android:text="@string/food_time04"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock04"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item04"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price04"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock04"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock04"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <!--Pratos Principais-->
+            <TextView
+                android:id="@+id/main_dishes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_item04"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/lexend"
+                android:text="@string/main_dishes"
+                android:textColor="@color/primary"
+                android:textSize="36sp" />
+            <!--PRINCIPAL 01-->
+            <ImageView
+                android:id="@+id/img_item05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_dishes"
+                android:src="@drawable/principal01" />
+
+            <TextView
+                android:id="@+id/food_title05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item05"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item05"
+                android:fontFamily="@font/lexend"
+                android:text="@string/title_item05"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title05"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item05"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock05"
+                android:layout_alignBottom="@id/img_clock05"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock05"
+                android:gravity="center"
+                android:text="@string/food_time05"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock05"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item05"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price05"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock05"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock05"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line05"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item05"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+            <!--PRINCIPAL 02-->
+            <ImageView
+                android:id="@+id/img_item06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line05"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/principal02" />
+
+            <TextView
+                android:id="@+id/food_title06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item06"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item06"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_title06"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title06"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item06"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock06"
+                android:layout_alignBottom="@id/img_clock06"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock06"
+                android:gravity="center"
+                android:text="@string/food_time06"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock06"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item06"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price06"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock06"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock06"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line06"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item06"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+
+            <!--PRINCIPAL 03-->
+            <ImageView
+                android:id="@+id/img_item07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line06"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/principal03" />
+
+            <TextView
+                android:id="@+id/food_title07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item07"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item07"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_title07"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_title07"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item07"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/food_time07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock07"
+                android:layout_alignBottom="@id/img_clock07"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock07"
+                android:gravity="center"
+                android:text="@string/food_time07"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/food_price07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock07"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item07"
+                android:fontFamily="@font/lexend"
+                android:text="@string/food_price07"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/food_check07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock07"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock07"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <!--BEBIDAS-->
+            <TextView
+                android:id="@+id/drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_item07"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drinks"
+                android:textColor="@color/primary"
+                android:textSize="36sp" />
+
+            <!--BEBIDAS 01-->
+            <ImageView
+                android:id="@+id/img_item08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drinks"
+                android:src="@drawable/bebida01" />
+
+            <TextView
+                android:id="@+id/drink_title01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item08"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item08"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_title01"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drink_title01"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item08"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/drink_time01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock08"
+                android:layout_alignBottom="@id/img_clock08"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock08"
+                android:gravity="center"
+                android:text="@string/drink_time01"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/drink_price01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock08"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item08"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_price01"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/drink_check01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock08"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock08"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line07"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item08"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+            <!--BEBIDA 02-->
+
+            <ImageView
+                android:id="@+id/img_item09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line07"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/bebida02" />
+
+            <TextView
+                android:id="@+id/drink_title02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item09"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item09"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_title02"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drink_title02"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item09"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/drink_time02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock09"
+                android:layout_alignBottom="@id/img_clock09"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock09"
+                android:gravity="center"
+                android:text="@string/drink_time02"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/drink_price02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock09"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item09"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_price02"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/drink_check02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock09"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/img_clock09"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <View
+                android:id="@+id/line08"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/img_item09"
+                android:layout_marginTop="15dp"
+                android:background="@color/primary" />
+
+            <!--BEBIDA 03-->
+
+            <ImageView
+                android:id="@+id/img_item10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/line08"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/bebida03" />
+
+            <TextView
+                android:id="@+id/drink_title03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item10"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img_item10"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_title03"
+                android:textColor="@color/default_font_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_clock10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drink_title03"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item10"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/drink_time03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock10"
+                android:layout_alignBottom="@id/img_clock10"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/img_clock10"
+                android:gravity="center"
+                android:text="@string/drink_time03"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/drink_price03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_clock10"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_item10"
+                android:fontFamily="@font/lexend"
+                android:text="@string/drink_price03"
+                android:textColor="@color/default_font_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/drink_check03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_clock10"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toEndOf="@id/img_clock10"
+                android:buttonTint="@color/primary"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--FOOTER-->
+    <View
+        android:id="@+id/view_footer"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/comment_input"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/white"
+        android:hint="@string/comment_input"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/amount"
+        app:layout_constraintStart_toStartOf="@+id/view_footer"
+        app:layout_constraintEnd_toEndOf="@+id/view_footer"
+        android:layout_marginBottom="10dp"
+        tools:ignore="RtlSymmetry"
+         />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/lexend_semibold"
+        android:text="@string/amount"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_number"
+        app:layout_constraintStart_toStartOf="@+id/view_footer"
+        app:layout_constraintTop_toTopOf="@+id/amount_number" />
+
+
+    <TextView
+        android:id="@+id/amount_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/lexend_semibold"
+        android:text="@string/amount_number"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/finish_button"
+        app:layout_constraintEnd_toEndOf="@+id/view_footer" />
+
+    <Button
+        android:id="@+id/finish_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/lexend"
+        android:text="@string/finish_button"
+        android:textColor="@color/default_font_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_footer"
+        app:layout_constraintEnd_toEndOf="@+id/view_footer"
+        app:layout_constraintStart_toStartOf="@+id/view_footer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
